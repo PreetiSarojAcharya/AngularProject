@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
           <div class="col s12 m7">
             <div class="card">
               <div class="card-image">
-                <img src="../../../assets/img/sample-1.jpg" />
+                <img src="../../../assets/img/_PP08880.jpg" />
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
