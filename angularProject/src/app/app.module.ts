@@ -10,6 +10,7 @@ import { ContactUsComponent } from './layouts/contact-us/contact-us.component';
 import { BannerTwoComponent } from './layouts/banner-two/banner-two.component';
 import { ProductsComponent } from './layouts/products/products.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
+import { NavComponent } from './layouts/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
     BannerTwoComponent,
     ProductsComponent,
     BannerOneComponent,
+    NavComponent,
   ],
   imports: [BrowserModule], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
