@@ -11,6 +11,11 @@ import { BannerTwoComponent } from './layouts/banner-two/banner-two.component';
 import { ProductsComponent } from './layouts/products/products.component';
 import { BannerOneComponent } from './layouts/banner-one/banner-one.component';
 import { NavComponent } from './layouts/nav/nav.component';
+import { SimpleStyleDirectiveDirective } from './directives/simple-style-directive.directive';
+import { MobPartComponent } from './products/mob-part/mob-part.component';
+import { LaptopComponent } from './products/laptop/laptop.component';
+import { BooksComponent } from './products/books/books.component';
+import { PensComponent } from './products/pens/pens.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { NavComponent } from './layouts/nav/nav.component';
     ProductsComponent,
     BannerOneComponent,
     NavComponent,
+    SimpleStyleDirectiveDirective,
+    MobPartComponent,
+    LaptopComponent,
+    BooksComponent,
+    PensComponent,
   ],
   imports: [BrowserModule], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
