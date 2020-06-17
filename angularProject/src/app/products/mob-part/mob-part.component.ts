@@ -41,4 +41,13 @@ export class MobPartComponent implements OnInit {
       imagepath: '../../../assets/img/office.jpg',
     },
   ];
+
+  countProduct() {
+    let totalCount = 0;
+
+    for (let gg of this.mobParts) {
+      totalCount += gg.inStock;
+    }
+    return totalCount;
+  }
 }
