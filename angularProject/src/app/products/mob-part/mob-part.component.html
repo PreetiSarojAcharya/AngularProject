@@ -2,10 +2,11 @@
 <ul>
   <li *ngFor="let mobPart of mobParts">
     <div class="col s12 m4">
-      <div class="card">
+      <div class="card" [class.clsVar]="mobPart.canPurch">
         <div class="card-image">
           <img [src]="mobPart.imagepath" />
 
+          <!-- <img src="../../../assets/img/{{ mobPart.imagepath }}" /> -->
           <span class="card-title"
             ><b>{{ mobPart.cardtitle }}</b></span
           >
