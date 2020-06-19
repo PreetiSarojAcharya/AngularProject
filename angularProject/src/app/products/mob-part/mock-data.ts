@@ -6,7 +6,7 @@ export const MOBPART: MobPart[] = [
     id: 1001,
     name: 'ScreenPreeti 5.5',
     description: '5.5 Screen for Moto g',
-    inStock: 5,
+    inStock: 150,
     prodColor: 'red',
     canPurch: true,
     imagepath: '../../../assets/img/_PP08880.jpg',

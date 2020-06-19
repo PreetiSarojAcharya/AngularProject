@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SqrtPipe } from './pipes/sqrt.pipe';
@@ -35,7 +36,7 @@ import { PensComponent } from './products/pens/pens.component';
     BooksComponent,
     PensComponent,
   ],
-  imports: [BrowserModule], // module : group of logics
+  imports: [BrowserModule, FormsModule], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
 })
 export class AppModule {}

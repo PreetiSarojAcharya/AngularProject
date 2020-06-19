@@ -28,4 +28,8 @@ export class MobPartComponent implements OnInit {
   downQuantity(mobPart) {
     if (mobPart.quantity != 0) mobPart.quantity--;
   }
+
+  catchVal(event) {
+    console.log('This is the value', event);
+  }
 }
