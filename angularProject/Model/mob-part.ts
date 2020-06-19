@@ -7,4 +7,5 @@ export class MobPart {
   prodColor: string;
   canPurch: boolean;
   imagepath: string;
+  quantity: number;
 }

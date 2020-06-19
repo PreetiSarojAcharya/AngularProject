@@ -2,7 +2,7 @@
 <ul>
   <li *ngFor="let mobPart of mobParts">
     <div class="col s12 m4">
-      <div class="card" [class.clsVar]="mobPart.canPurch">
+      <div class="card" [class.clsName]="mobPart.inStock">
         <div class="card-image">
           <img [src]="mobPart.imagepath" />
 
@@ -55,6 +55,19 @@
           <div *ngIf="mobPart.inStock == 0">
             OutOfstock..
           </div>
+          <p>
+            <a
+              class="waves-effect waves-light btn"
+              (click)="downQuantity(mobPart)"
+              ><i class="material-icons">remove</i></a
+            >
+            {{ mobPart.quantity }}
+            <a
+              class="waves-effect waves-light btn"
+              (click)="upQuantity(mobPart)"
+              ><i class="material-icons">add</i></a
+            >
+          </p>
         </div>
         <div class="card-action">
           <a href="#">This is a link</a>

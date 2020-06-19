@@ -10,6 +10,7 @@ export const MOBPART: MobPart[] = [
     prodColor: 'red',
     canPurch: true,
     imagepath: '../../../assets/img/_PP08880.jpg',
+    quantity: 0,
   },
   {
     cardtitle: 'Nature',
@@ -20,6 +21,7 @@ export const MOBPART: MobPart[] = [
     prodColor: 'green',
     canPurch: false,
     imagepath: '../../../assets/img/sample-1.jpg',
+    quantity: 0,
   },
   {
     cardtitle: 'Office',
@@ -30,5 +32,6 @@ export const MOBPART: MobPart[] = [
     prodColor: 'blue',
     canPurch: true,
     imagepath: '../../../assets/img/office.jpg',
+    quantity: 0,
   },
 ];
