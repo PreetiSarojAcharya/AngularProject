@@ -29,7 +29,10 @@ export class MobPartComponent implements OnInit {
     if (mobPart.quantity != 0) mobPart.quantity--;
   }
 
-  catchVal(event) {
-    console.log('This is the value', event);
+  catchVal(eventData, eventObj) {
+    console.clear();
+    ``;
+    console.log('This is the value', eventData);
+    console.log(eventObj);
   }
 }

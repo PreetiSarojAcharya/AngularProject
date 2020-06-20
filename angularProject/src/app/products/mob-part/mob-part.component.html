@@ -63,7 +63,7 @@
             >
             <input
               [value]="mobPart.quantity"
-              (input)="catchVal($event.target.value)"
+              (input)="catchVal($event.target.value, $event)"
               [(ngModel)]="mobPart.quantity"
             />
             {{ mobPart.quantity }}
