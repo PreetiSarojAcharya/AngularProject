@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { SqrtPipe } from './pipes/sqrt.pipe';
@@ -17,6 +18,19 @@ import { MobPartComponent } from './products/mob-part/mob-part.component';
 import { LaptopComponent } from './products/laptop/laptop.component';
 import { BooksComponent } from './products/books/books.component';
 import { PensComponent } from './products/pens/pens.component';
+import { conditionallyCreateMapObjectLiteral } from '@angular/compiler/src/render3/view/util';
+import { PagenotfoundComponent } from './layouts/pagenotfound/pagenotfound.component';
+import { HomeComponent } from './layouts/home/home.component';
+
+const appRoutes: Routes = [
+  { path: 'mobile', component: MobPartComponent },
+  { path: 'laptop', component: LaptopComponent },
+  { path: 'book', component: BooksComponent },
+  { path: 'pen', component: PensComponent },
+  { path: '**', component: PagenotfoundComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+];
 
 @NgModule({
   declarations: [
@@ -35,8 +49,10 @@ import { PensComponent } from './products/pens/pens.component';
     LaptopComponent,
     BooksComponent,
     PensComponent,
+    PagenotfoundComponent,
+    HomeComponent,
   ],
-  imports: [BrowserModule, FormsModule], // module : group of logics
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
 })
 export class AppModule {}
