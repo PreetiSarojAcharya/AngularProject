@@ -23,6 +23,7 @@ import { HomeComponent } from './layouts/home/home.component';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { MotoComponent } from './products/mob-part/moto/moto.component';
 import { SamsungComponent } from './products/mob-part/samsung/samsung.component';
+import { AppDuplicateRoutingModule } from './modules/app-duplicate-routing.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { SamsungComponent } from './products/mob-part/samsung/samsung.component'
     MotoComponent,
     SamsungComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule], // module : group of logics
+  imports: [BrowserModule, FormsModule, AppRoutingModule, AppDuplicateRoutingModule], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
 })
 export class AppModule {}
