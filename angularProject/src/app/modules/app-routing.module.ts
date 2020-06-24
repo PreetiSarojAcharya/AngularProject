@@ -1,8 +1,9 @@
+import { MobPartComponent } from './../products/mob-part/mob-part.component';
+import { MobilenavComponent } from './../products/mob-part/mobilenav/mobilenav.component';
 import { SamsungComponent } from './../products/mob-part/samsung/samsung.component';
 import { MotoComponent } from './../products/mob-part/moto/moto.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MobPartComponent } from '../products/mob-part/mob-part.component';
 import { LaptopComponent } from '../products/laptop/laptop.component';
 import { BooksComponent } from '../products/books/books.component';
 import { PensComponent } from '../products/pens/pens.component';
@@ -13,8 +14,9 @@ import { RouterModule, Routes } from '@angular/router';
 const appRoutes: Routes = [
   {
     path: 'mobile',
-    component: MobPartComponent,
+    component: MobilenavComponent,
     children: [
+      { path: '', component: MobPartComponent },
       {
         path: 'moto',
         component: MotoComponent,
