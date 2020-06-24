@@ -25,6 +25,12 @@ import { MotoComponent } from './products/mob-part/moto/moto.component';
 import { SamsungComponent } from './products/mob-part/samsung/samsung.component';
 import { AppDuplicateRoutingModule } from './modules/app-duplicate-routing.module';
 import { MobilenavComponent } from './products/mob-part/mobilenav/mobilenav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// import { MatCheckboxModule } from '@angular/material/checkbox';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+
+import { AllMaterialModule } from './modules/all-material.module';
 
 @NgModule({
   declarations: [
@@ -49,7 +55,14 @@ import { MobilenavComponent } from './products/mob-part/mobilenav/mobilenav.comp
     SamsungComponent,
     MobilenavComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, AppDuplicateRoutingModule], // module : group of logics
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    AppDuplicateRoutingModule,
+    BrowserAnimationsModule,
+    AllMaterialModule,
+  ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
 })
 export class AppModule {}
