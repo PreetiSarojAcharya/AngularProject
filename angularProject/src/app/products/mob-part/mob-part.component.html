@@ -35,6 +35,9 @@
             Description : <q>{{ mobPart.description }}</q>
           </div>
 
+          <p>Price : {{ mobPart.price | currency: "INR" }}</p>
+          <p>144 : {{ 144 | sqrt }}</p>
+
           <ng-container
             *ngIf="mobPart.inStock != 0; then stockbval; else notstockval"
           ></ng-container>

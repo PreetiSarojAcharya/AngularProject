@@ -8,4 +8,5 @@ export class MobPart {
   canPurch: boolean;
   imagepath: string;
   quantity: number;
+  price: number;
 }

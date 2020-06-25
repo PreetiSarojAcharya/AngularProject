@@ -12,6 +12,8 @@ import { HomeComponent } from '../layouts/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   {
     path: 'mobile',
     component: MobilenavComponent,
@@ -32,8 +34,6 @@ const appRoutes: Routes = [
   { path: 'book', component: BooksComponent },
   { path: 'pen', component: PensComponent },
   { path: '**', component: PagenotfoundComponent },
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({

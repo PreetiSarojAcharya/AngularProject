@@ -8,9 +8,34 @@ import { MobPart } from 'Model/mob-part';
   styles: [],
 })
 export class MobPartComponent implements OnInit {
-  constructor() {}
-  mobParts: MobPart[] = MOBPART;
-  ngOnInit(): void {}
+  mobParts: MobPart[];
+
+  ngOnInit(): void {
+    // component
+    this.mobParts = MOBPART;
+    console.log('1 ngOnInit Block...!');
+  }
+
+  constructor() {
+    console.log('2 Constructor Block...!');
+  } // class: DI -> obj init
+
+  // 8 lifecylehooks
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.mobParts = [];
+    console.log('3 ngOnDestroy Block...!');
+  }
+
+  ngAfterViewInit() {
+    console.log('4 ngAfterViewInit Block...!');
+  }
+
+  ngAfterContentInit() {
+    console.log('5 ngAfterContentInit Block...!');
+  }
 
   countProduct() {
     let totalCount = 0;
@@ -31,7 +56,6 @@ export class MobPartComponent implements OnInit {
 
   catchVal(eventData, eventObj) {
     console.clear();
-    ``;
     console.log('This is the value', eventData);
     console.log(eventObj);
   }

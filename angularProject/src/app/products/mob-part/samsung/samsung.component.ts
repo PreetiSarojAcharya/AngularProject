@@ -4,7 +4,18 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-samsung',
   template: `
     <h1>
-      samsung works!
+      <h1>
+        <img
+          src=".../../../../assets/img/_PP04970.jpg"
+          width="400"
+          class="img-circle"
+        />
+        <img
+          src="../../../../assets/img/_PP04949.jpg"
+          width="400"
+          class="img-rounded"
+        />
+      </h1>
     </h1>
   `,
   styles: [],

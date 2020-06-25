@@ -4,7 +4,16 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-moto',
   template: `
     <h1>
-      moto works!
+      <img
+        src="../../../../assets/img/_PP08970.jpg"
+        width="400"
+        class="img-rounded"
+      />
+      <img
+        src=".../../../../assets/img/_PP04894.jpg"
+        width="400"
+        class="img-circle"
+      />
     </h1>
   `,
   styles: [],

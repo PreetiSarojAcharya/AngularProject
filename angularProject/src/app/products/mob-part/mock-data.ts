@@ -11,6 +11,7 @@ export const MOBPART: MobPart[] = [
     canPurch: true,
     imagepath: '../../../assets/img/_PP08880.jpg',
     quantity: 0,
+    price: 1200,
   },
   {
     cardtitle: 'Nature',
@@ -22,6 +23,7 @@ export const MOBPART: MobPart[] = [
     canPurch: false,
     imagepath: '../../../assets/img/sample-1.jpg',
     quantity: 0,
+    price: 1200,
   },
   {
     cardtitle: 'Office',
@@ -33,5 +35,6 @@ export const MOBPART: MobPart[] = [
     canPurch: true,
     imagepath: '../../../assets/img/office.jpg',
     quantity: 0,
+    price: 1200,
   },
 ];
