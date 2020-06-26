@@ -36,7 +36,7 @@
           </div>
 
           <p>Price : {{ mobPart.price | currency: "INR" }}</p>
-          <p>144 : {{ 144 | sqrt }}</p>
+          <p>144 : {{ 1234 | sqrt }}</p>
 
           <ng-container
             *ngIf="mobPart.inStock != 0; then stockbval; else notstockval"
@@ -59,13 +59,14 @@
             />
           </div>
 
-          <div *ngIf="mobPart.inStock > 0">
+          <!-- <div *ngIf="mobPart.inStock > 0">
             Last <mark>{{ mobPart.inStock }}</mark> Parts Available in stock
             now...
           </div>
           <div *ngIf="mobPart.inStock == 0">
             OutOfstock..
-          </div>
+          </div> -->
+
           <p>
             <a
               class="waves-effect waves-light btn"

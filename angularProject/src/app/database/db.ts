@@ -1,6 +1,6 @@
-import { MobPart } from '../../../../Model/mob-part';
+import { MobPart } from '../../../Model/mob-part';
 
-export const MOBPART: MobPart[] = [
+export const DBMOBPART: MobPart[] = [
   {
     cardtitle: 'Chef baby',
     id: 1211,

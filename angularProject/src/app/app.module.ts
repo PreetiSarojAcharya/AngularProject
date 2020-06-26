@@ -1,3 +1,4 @@
+import { ComService } from './services/com.service';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -64,6 +65,7 @@ import { AllMaterialModule } from './modules/all-material.module';
     AllMaterialModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
+  providers: [ComService],
 })
 export class AppModule {}
 

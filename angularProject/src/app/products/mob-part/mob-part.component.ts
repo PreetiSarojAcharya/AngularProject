@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MOBPART } from './mock-data';
 import { MobPart } from 'Model/mob-part';
+import { ComService } from './../../services/com.service';
 
 @Component({
   selector: 'app-mob-part',
@@ -10,15 +10,16 @@ import { MobPart } from 'Model/mob-part';
 export class MobPartComponent implements OnInit {
   mobParts: MobPart[];
 
-  ngOnInit(): void {
-    // component
-    this.mobParts = MOBPART;
-    console.log('1 ngOnInit Block...!');
-  }
-
-  constructor() {
+  constructor(private comService: ComService) {
+    this.mobParts = comService.getMobParts();
     console.log('2 Constructor Block...!');
   } // class: DI -> obj init
+
+  ngOnInit(): void {
+    // component
+    this.mobParts = this.comService.getMobParts();
+    console.log('1 ngOnInit Block...!');
+  }
 
   // 8 lifecylehooks
 
