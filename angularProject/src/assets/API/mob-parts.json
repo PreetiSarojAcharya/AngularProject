@@ -1,0 +1,40 @@
+{
+  "apidata": [
+    {
+      "cardtitle": "Chef baby",
+      "id": 12211,
+      "name": "ScreenPreeti 5.5",
+      "description": "5.5 Screen for Moto g",
+      "inStock": 150,
+      "prodColor": "red",
+      "canPurch": true,
+      "imagepath": "../../../assets/img/_PP08880.jpg",
+      "quantity": 0,
+      "price": 1200
+    },
+    {
+      "cardtitle": "Nature",
+      "id": 1002,
+      "name": "Screen 5",
+      "description": "5 Screen for Samsung",
+      "inStock": 8,
+      "prodColor": "green",
+      "canPurch": false,
+      "imagepath": "../../../assets/img/sample-1.jpg",
+      "quantity": 0,
+      "price": 1200
+    },
+    {
+      "cardtitle": "Office",
+      "id": 1003,
+      "name": "key panel",
+      "description": "Key panel for Nokia",
+      "inStock": 0,
+      "prodColor": "blue",
+      "canPurch": true,
+      "imagepath": "../../../assets/img/office.jpg",
+      "quantity": 0,
+      "price": 1200
+    }
+  ]
+}

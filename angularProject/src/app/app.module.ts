@@ -2,6 +2,7 @@ import { ComService } from './services/com.service';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SqrtPipe } from './pipes/sqrt.pipe';
@@ -63,6 +64,7 @@ import { AllMaterialModule } from './modules/all-material.module';
     AppDuplicateRoutingModule,
     BrowserAnimationsModule,
     AllMaterialModule,
+    HttpModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
   providers: [ComService],

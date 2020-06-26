@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
-import { DBMOBPART } from '../database/db';
+//import { DBMOBPART } from '../database/db';
+
+import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ComService {
-  constructor() {}
+  constructor(private http: Http) {}
 
   getMobParts() {
-    return DBMOBPART;
+    return this.http
+      .get('./../../assets/API/mob-parts.json')
+      .pipe(map((response) => response.json().apidata));
+    //return DBMOBPART;
   }
 }

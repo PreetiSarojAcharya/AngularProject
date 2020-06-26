@@ -11,13 +11,17 @@ export class MobPartComponent implements OnInit {
   mobParts: MobPart[];
 
   constructor(private comService: ComService) {
-    this.mobParts = comService.getMobParts();
+    // this.mobParts = comService.getMobParts();
+
     console.log('2 Constructor Block...!');
   } // class: DI -> obj init
 
   ngOnInit(): void {
     // component
-    this.mobParts = this.comService.getMobParts();
+    // this.mobParts = this.comService.getMobParts();
+    this.comService
+      .getMobParts()
+      .subscribe((response) => (this.mobParts = response));
     console.log('1 ngOnInit Block...!');
   }
 
@@ -40,9 +44,10 @@ export class MobPartComponent implements OnInit {
 
   countProduct() {
     let totalCount = 0;
-
-    for (let gg of this.mobParts) {
-      totalCount += gg.inStock;
+    if (Array.isArray(this.mobParts)) {
+      for (let gg of this.mobParts) {
+        totalCount += gg.inStock;
+      }
     }
     return totalCount;
   }
