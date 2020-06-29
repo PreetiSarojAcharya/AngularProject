@@ -33,6 +33,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { AllMaterialModule } from './modules/all-material.module';
+import { LoginComponent } from './admin/login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -56,6 +59,8 @@ import { AllMaterialModule } from './modules/all-material.module';
     MotoComponent,
     SamsungComponent,
     MobilenavComponent,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,7 @@ import { AllMaterialModule } from './modules/all-material.module';
     HttpModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
-  providers: [ComService],
+  providers: [AuthGuard, ComService],
 })
 export class AppModule {}
 

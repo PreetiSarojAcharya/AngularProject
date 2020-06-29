@@ -11,9 +11,20 @@ import { PagenotfoundComponent } from '../layouts/pagenotfound/pagenotfound.comp
 import { HomeComponent } from '../layouts/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { LoginComponent } from './../admin/login/login.component';
+import { DashboardComponent } from './../admin/dashboard/dashboard.component';
+import { AuthGuard } from './../guards/auth.guard';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'dashboard',
+    canActivate: [AuthGuard],
+    component: DashboardComponent,
+  },
+
   {
     path: 'mobile',
     component: MobilenavComponent,
