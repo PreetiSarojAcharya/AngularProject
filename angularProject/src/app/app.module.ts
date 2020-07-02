@@ -36,6 +36,11 @@ import { AllMaterialModule } from './modules/all-material.module';
 import { LoginComponent } from './admin/login/login.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ManageProductComponent } from './admin/dashboard/manage-product/manage-product.component';
+import { SetPriceComponent } from './admin/dashboard/set-price/set-price.component';
+import { DashboardNavComponent } from './admin/dashboard/dashboard-nav/dashboard-nav.component';
+import { LogindasboardComponent } from './admin/logindasboard/logindasboard.component';
+import { LazyModule } from './modules/lazy/lazy.module';
 
 @NgModule({
   declarations: [
@@ -61,6 +66,10 @@ import { AuthGuard } from './guards/auth.guard';
     MobilenavComponent,
     LoginComponent,
     DashboardComponent,
+    ManageProductComponent,
+    SetPriceComponent,
+    DashboardNavComponent,
+    LogindasboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +79,7 @@ import { AuthGuard } from './guards/auth.guard';
     BrowserAnimationsModule,
     AllMaterialModule,
     HttpModule,
+    LazyModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
   providers: [AuthGuard, ComService],

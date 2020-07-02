@@ -5,8 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: [],
 })
-export class NavComponent implements OnInit {
-  constructor() {}
+export class NavComponent {
+  logout() {
+    localStorage.removeItem('username');
+  }
 
-  ngOnInit(): void {}
+  isLogin() {
+    if (localStorage.getItem('username') != null) return true;
+    return false;
+  }
 }

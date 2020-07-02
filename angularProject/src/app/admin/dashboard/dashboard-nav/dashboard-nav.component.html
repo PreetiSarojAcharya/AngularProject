@@ -1,0 +1,25 @@
+<nav class="green" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo">Dashboard</a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="isLogindash()"><a routerLink="product">Manage Product</a></li>
+      <li *ngIf="isLogindash()"><a routerLink="price">Set Price</a></li>
+      <li *ngIf="!isLogindash()"><a routerLink="logindashboard">Login</a></li>
+      <li *ngIf="isLogindash()">
+        <a routerLink="/dashboard" (click)="logoutdash()">LogOut</a>
+      </li>
+    </ul>
+
+    <ul id="nav-dashboard" class="sidenav">
+      <li><a routerLink="product">Manage Product</a></li>
+      <li><a routerLink="price">Set Price</a></li>
+      <li><a routerLink="dashboard">Dashboard</a></li>
+      <li><a routerLink="/logindashboard">Login</a></li>
+    </ul>
+
+    <a href="#" data-target="nav-dashboard" class="sidenav-trigger"
+      ><i class="material-icons">menu</i></a
+    >
+  </div>
+</nav>
+<router-outlet></router-outlet>
