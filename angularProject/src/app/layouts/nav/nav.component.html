@@ -24,8 +24,12 @@
       <li><a routerLink="laptop">Laptop</a></li>
       <li><a routerLink="book">Book</a></li>
       <li><a routerLink="pen">Pen</a></li>
-      <li><a routerLink="dashboard">Dashboard</a></li>
-      <li><a routerLink="login">Login</a></li>
+      <li *ngIf="!isLogin()"><a routerLink="admin">Admin</a></li>
+      <li *ngIf="isLogin()"><a routerLink="dashboard">Dashboard</a></li>
+      <li *ngIf="!isLogin()"><a routerLink="login">Login</a></li>
+      <li *ngIf="isLogin()">
+        <a routerLink="home" (click)="logout()">LogOut</a>
+      </li>
     </ul>
 
     <a href="#" data-target="nav-mobile" class="sidenav-trigger"
