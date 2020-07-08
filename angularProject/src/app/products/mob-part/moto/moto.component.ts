@@ -1,25 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-moto',
-  template: `
-    <h1>
-      <img
-        src="../../../../assets/img/_PP08970.jpg"
-        width="400"
-        class="img-rounded"
-      />
-      <img
-        src=".../../../../assets/img/_PP04894.jpg"
-        width="400"
-        class="img-circle"
-      />
-    </h1>
-  `,
+  templateUrl: './moto.component.html',
   styles: [],
 })
-export class MotoComponent implements OnInit {
-  constructor() {}
+export class MotoComponent {
+  mobParts: any[];
+  constructor(angularFireDatabase: AngularFireDatabase) {
+    angularFireDatabase
+      .list('/apidata')
+      .valueChanges()
+      .subscribe((mobParts) => {
+        this.mobParts = mobParts;
+        console.log(this.mobParts);
+      });
+  }
 
-  ngOnInit(): void {}
+  upQuantity(mobPart) {
+    if (mobPart.quantity < mobPart.inStock) mobPart.quantity++;
+  }
+
+  downQuantity(mobPart) {
+    if (mobPart.quantity != 0) mobPart.quantity--;
+  }
+
+  catchVal(eventData, eventObj) {
+    console.clear();
+    console.log('This is the value', eventData);
+    console.log(eventObj);
+  }
 }

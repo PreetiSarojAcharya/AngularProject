@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <h1>
       <h1>
         <img
-          src=".../../../../assets/img/_PP04970.jpg"
+          src=".../../../../assets/img/_PP08899.jpg"
           width="400"
           class="img-circle"
         />

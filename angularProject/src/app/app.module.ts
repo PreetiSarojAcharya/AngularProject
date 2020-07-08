@@ -42,6 +42,11 @@ import { DashboardNavComponent } from './admin/dashboard/dashboard-nav/dashboard
 import { LogindasboardComponent } from './admin/logindasboard/logindasboard.component';
 import { LazyModule } from './modules/lazy/lazy.module';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { firebaseConfig } from './firebase/firebase.config';
+import { HostDirective } from './directives/host.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +75,7 @@ import { LazyModule } from './modules/lazy/lazy.module';
     SetPriceComponent,
     DashboardNavComponent,
     LogindasboardComponent,
+    HostDirective,
   ],
   imports: [
     BrowserModule,
@@ -80,6 +86,8 @@ import { LazyModule } from './modules/lazy/lazy.module';
     AllMaterialModule,
     HttpModule,
     LazyModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
   providers: [AuthGuard, ComService],

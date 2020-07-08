@@ -1,0 +1,86 @@
+<ul>
+  <li *ngFor="let mobPart of mobParts">
+    <div class="col s12 m4">
+      <div class="card" [class.clsName]="mobPart.inStock">
+        <div class="card-image">
+          <img [src]="mobPart.imagepath" />
+
+          <!-- <img src="../../../assets/img/{{ mobPart.imagepath }}" /> -->
+          <span class="card-title"
+            ><b>{{ mobPart.cardtitle }}</b></span
+          >
+        </div>
+        <div class="card-content">
+          <p appSimpleStyleDirective>
+            Mobile Part ID : <b>{{ mobPart.id }}</b>
+          </p>
+
+          <div [style.color]="mobPart.prodColor">
+            45 Mobile Part Name :
+            <b
+              ><i> {{ mobPart.name | uppercase }}</i></b
+            >
+          </div>
+
+          <div>
+            Description : <q>{{ mobPart.description }}</q>
+          </div>
+
+          <p>Price : {{ mobPart.price | currency: "INR" }}</p>
+          <p>144 : {{ 1234 | sqrt }}</p>
+
+          <ng-container
+            *ngIf="mobPart.inStock != 0; then stockbval; else notstockval"
+          ></ng-container>
+
+          <ng-template #stockbval
+            ><mark>{{ mobPart.inStock }}</mark> Parts Available in stock
+            now...</ng-template
+          >
+          <ng-template #notstockval>Out of stock</ng-template>
+
+          <div
+            [ngStyle]="{
+              display: mobPart.canPurch === true ? 'inline-block' : 'none'
+            }"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Green_sphere.svg/2000px-Green_sphere.svg.png"
+              width="16"
+            />
+          </div>
+
+          <!-- <div *ngIf="mobPart.inStock > 0">
+            Last <mark>{{ mobPart.inStock }}</mark> Parts Available in stock
+            now...
+          </div>
+          <div *ngIf="mobPart.inStock == 0">
+            OutOfstock..
+          </div> -->
+
+          <p>
+            <a
+              class="waves-effect waves-light btn"
+              (click)="downQuantity(mobPart)"
+              ><i class="material-icons">remove</i></a
+            >
+            <input
+              [value]="mobPart.quantity"
+              (input)="catchVal($event.target.value, $event)"
+              [(ngModel)]="mobPart.quantity"
+            />
+            {{ mobPart.quantity }}
+            <a
+              class="waves-effect waves-light btn"
+              (click)="upQuantity(mobPart)"
+              ><i class="material-icons">add</i></a
+            >
+          </p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
