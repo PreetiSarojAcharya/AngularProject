@@ -6,7 +6,19 @@
       <li><a routerLink="home">Home</a></li>
       <li><a routerLink="/lazy/lazy-child">Lazy</a></li>
       <li><a routerLink="mobile">Mobile</a></li>
+
       <li><a routerLink="laptop">Laptop</a></li>
+      <li>
+        <a [routerLink]="[{ outlets: { outlet1: ['lapiDetails'] } }]"
+          >Laptop Details</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="[{ outlets: { outlet2: ['lapiOffers'] } }]"
+          >Laptop Offers</a
+        >
+      </li>
+
       <li><a routerLink="book">Book</a></li>
       <li><a routerLink="pen">Pen</a></li>
       <li *ngIf="!isLogin()"><a routerLink="admin">Admin</a></li>
@@ -22,6 +34,17 @@
       <li><a routerLink="/lazy/lazy-child">Lazy</a></li>
       <li><a routerLink="mobile">Mobile</a></li>
       <li><a routerLink="laptop">Laptop</a></li>
+      <li>
+        <a [routerLink]="[{ outlets: { outlet1: ['lapiDetails'] } }]"
+          >Laptop Details</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="[{ outlets: { outlet2: ['lapiOffers'] } }]"
+          >Laptop Offers</a
+        >
+      </li>
+
       <li><a routerLink="book">Book</a></li>
       <li><a routerLink="pen">Pen</a></li>
       <li *ngIf="!isLogin()"><a routerLink="admin">Admin</a></li>

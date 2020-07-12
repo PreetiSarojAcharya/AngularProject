@@ -2,3 +2,28 @@
   Welcome to dashboard ! Please login to access the Manage-Product and Set-Price
   page
 </p>
+
+<h1>Product Detail</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ProductName</th>
+      <th>TotalProduct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let products of products">
+      <tr>
+        <td>{{ products.ProductName }}</td>
+        <td>{{ products.TotalProduct }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+<!-- <ul>
+  <li *ngFor="let products of products">
+    {{ products.ProductName }} ----- {{ products.TotalProduct }}
+  </li>
+</ul> -->

@@ -1,3 +1,5 @@
+import { LapiOffersComponent } from './../products/laptop/lapi-offers/lapi-offers.component';
+import { LapiDetailsComponent } from './../products/laptop/lapi-details/lapi-details.component';
 import { LazyModule } from './lazy/lazy.module';
 import { LogindasboardComponent } from './../admin/logindasboard/logindasboard.component';
 import { SetPriceComponent } from './../admin/dashboard/set-price/set-price.component';
@@ -68,6 +70,8 @@ const appRoutes: Routes = [
     ],
   },
   { path: 'laptop', component: LaptopComponent },
+  { path: 'lapiDetails', component: LapiDetailsComponent, outlet: 'outlet1' },
+  { path: 'lapiOffers', component: LapiOffersComponent, outlet: 'outlet2' },
   { path: 'book', component: BooksComponent },
   { path: 'pen', component: PensComponent },
   {

@@ -1,4 +1,6 @@
+import { ProductService } from './../../../services/product.service';
 import { Component, OnInit } from '@angular/core';
+import { Productmodel } from './../../../Model/productmodel';
 
 @Component({
   selector: 'app-manage-product',
@@ -25,7 +27,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class ManageProductComponent implements OnInit {
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {}
 }

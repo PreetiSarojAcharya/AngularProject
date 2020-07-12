@@ -1,3 +1,4 @@
+import { ProductService } from './services/product.service';
 import { ComService } from './services/com.service';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -46,6 +47,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { firebaseConfig } from './firebase/firebase.config';
 import { HostDirective } from './directives/host.directive';
+import { LapiDetailsComponent } from './products/laptop/lapi-details/lapi-details.component';
+import { LapiOffersComponent } from './products/laptop/lapi-offers/lapi-offers.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +79,8 @@ import { HostDirective } from './directives/host.directive';
     DashboardNavComponent,
     LogindasboardComponent,
     HostDirective,
+    LapiDetailsComponent,
+    LapiOffersComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,7 +95,7 @@ import { HostDirective } from './directives/host.directive';
     AngularFireDatabaseModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
-  providers: [AuthGuard, ComService],
+  providers: [AuthGuard, ComService, ProductService],
 })
 export class AppModule {}
 
