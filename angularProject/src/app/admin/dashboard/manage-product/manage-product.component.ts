@@ -5,29 +5,37 @@ import { Productmodel } from './../../../Model/productmodel';
 @Component({
   selector: 'app-manage-product',
   template: `
-    <div class="col s12 m7">
-      <h2 class="header">Manage Product</h2>
-      <div class="card horizontal">
-        <div class="card-image">
-          <img src="../../../../assets/img/2.jpeg" />
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>
-              This is a Manage-Product page.
-            </p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1>Product Detail</h1>
+    <button class="btn btn-danger" style="width: 100px;" (click)="addProduct()">
+      Add Product
+    </button>
+    <table>
+      <thead>
+        <tr>
+          <th>ProductName</th>
+          <th>TotalProduct</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let products of products">
+          <tr>
+            <td>{{ products.ProductName }}</td>
+            <td>{{ products.TotalProduct }}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
   `,
   styles: [],
 })
 export class ManageProductComponent implements OnInit {
-  constructor(private productService: ProductService) {}
+  products: Productmodel[];
 
-  ngOnInit(): void {}
+  constructor(private productServ: ProductService) {}
+  ngOnInit() {
+    this.productServ.GetAllProducts().subscribe((productData) => {
+      this.products = productData;
+    });
+  }
+  addProduct() {}
 }

@@ -22,7 +22,7 @@ export class LogindasboardComponent implements OnInit {
       pswddash
     );
     if (output == true) {
-      this.router.navigate(['/dashboard/price']);
+      this.router.navigate(['/dashboard/product']);
     } else {
       this.msgdash = 'Invalid username or password for Dashboard!';
     }
