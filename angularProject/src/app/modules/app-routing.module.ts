@@ -1,3 +1,4 @@
+import { TempFormsComponent } from './../components/forms/temp-forms/temp-forms.component';
 import { LapiOffersComponent } from './../products/laptop/lapi-offers/lapi-offers.component';
 import { LapiDetailsComponent } from './../products/laptop/lapi-details/lapi-details.component';
 import { LazyModule } from './lazy/lazy.module';
@@ -22,11 +23,14 @@ import { LoginComponent } from './../admin/login/login.component';
 import { DashboardComponent } from './../admin/dashboard/dashboard.component';
 import { AuthGuard } from './../guards/auth.guard';
 import { AuthdashGuard } from './../guards/authdash.guard';
+import { ReactiveFormsComponent } from '../components/forms/reactive-forms/reactive-forms.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'tempForm', component: TempFormsComponent },
+  { path: 'reactForm', component: ReactiveFormsComponent },
 
   {
     path: 'dashboard',
