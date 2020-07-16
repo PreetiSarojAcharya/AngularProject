@@ -2,7 +2,7 @@ import { ProductService } from './services/product.service';
 import { ComService } from './services/com.service';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -97,6 +97,7 @@ import { ReactiveFormsComponent } from './components/forms/reactive-forms/reacti
     LazyModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
+    ReactiveFormsModule,
   ], // module : group of logics
   bootstrap: [AppComponent], // to run : root compo
   providers: [AuthGuard, ComService, ProductService],

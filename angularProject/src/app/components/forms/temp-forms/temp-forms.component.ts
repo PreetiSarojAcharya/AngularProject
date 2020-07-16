@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class TempFormsComponent {
+  cities = [
+    { code: 1, name: 'Pune' },
+    { code: 2, name: 'Mumbai' },
+    { code: 3, name: 'Nagpur' },
+    { code: 4, name: 'Nashik' },
+    ,
+  ];
+
   log(tempVar) {
     console.clear();
     console.log(tempVar);
