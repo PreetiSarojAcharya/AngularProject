@@ -1,3 +1,4 @@
+import { ProductviewComponent } from './../products/productview/productview.component';
 import { TempFormsComponent } from './../components/forms/temp-forms/temp-forms.component';
 import { LapiOffersComponent } from './../products/laptop/lapi-offers/lapi-offers.component';
 import { LapiDetailsComponent } from './../products/laptop/lapi-details/lapi-details.component';
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'product-view/:prodObj', component: ProductviewComponent },
   { path: 'tempForm', component: TempFormsComponent },
   { path: 'reactForm', component: ReactiveFormsComponent },
 
